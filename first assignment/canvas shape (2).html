@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>squre shape</h1>
+<canvas id ="squre" width="300" height="300"></canvas>
+
+<h1>rectangle shape</h1>
+<canvas id ="rectangle" width="300" height="300"></canvas>
+
+<h1>circle shape</h1>
+<canvas id ="circle" width="300" height="300"></canvas>
+
+<h1>triangle shape</h1>
+<canvas id ="triangle" width="300" height="300"></canvas>
+<script>
+
+var canvas, ctx;
+function creat_square(){
+    canvas = document.getElementById('squre');
+    ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'green';
+    ctx.fillRect(50, 50, 200, 200);
+    ctx.fill();
+}
+
+
+function creat_rectangle(){
+    canvas = document.getElementById('rectangle');
+    ctx = canvas.getContext('2d');
+      ctx.rect(50, 100, 200, 100);
+      ctx.fillStyle = 'red';
+      ctx.fill();
+}
+
+function creat_circle(){
+    canvas = document.getElementById('circle');
+    ctx = canvas.getContext('2d');
+    ctx.arc(150, 150, 80, 0, Math.PI * 2, true);
+    ctx.fillStyle = 'blue';
+    ctx.fill();
+
+}
+
+function creat_triangle(){
+    canvas = document.getElementById('triangle');
+    ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.moveTo(50, 50);
+    ctx.lineTo(50, 250);
+    ctx.lineTo(250, 250);
+    ctx.closePath();
+    ctx.fillStyle="purple";
+    ctx.fill();
+
+}
+
+creat_square();
+creat_rectangle();
+creat_circle();
+creat_triangle();
+
+</script>
+
+<style>
+    canvas{
+        background: #ddd;
+    }
+</style>
+</body>
+</html>
+
